@@ -4,18 +4,22 @@ using System;
 using UnityEngine;
 using System.Linq;
 using System.Net.Sockets;
+using System.Globalization;
 
 public class checkRecipe : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public GameObject finalDish;
+    public GameObject[] finalDishes;
     public int num_dishes = 3;
     public List<List<String>> recipeList = new List<List<String>>();
     List<Dictionary<string, string>> ingredientsList;
 
     private void Start()
     {
-        finalDish.SetActive(false);
+        foreach (GameObject dish in finalDishes)
+        {
+            dish.SetActive(false);
+        }
         recipeList = new List<List<String>>() {
             new List<string>() {"Carrot", "Tomato"},
             new List<string>() {"Cheese", "Dough"},
@@ -45,7 +49,7 @@ public class checkRecipe : MonoBehaviour
     {
         Dictionary<string, string> dict = ingredientsList[dish_num];
         if ((dict["Garnish"] == recipeList[dish_num][0]) && (dict["Main"] == recipeList[dish_num][1])) {
-            finalDish.SetActive(true);
+            finalDishes[dish_num].SetActive(true);
         }
     }
 }

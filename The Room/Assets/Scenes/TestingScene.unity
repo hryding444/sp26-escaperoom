@@ -1338,6 +1338,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8167947219614082614, guid: 36c9de5f2da5be640b5d0173db7c98f4, type: 3}
   m_PrefabInstance: {fileID: 366112102}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &366112104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4176930388521578728, guid: 36c9de5f2da5be640b5d0173db7c98f4, type: 3}
+  m_PrefabInstance: {fileID: 366112102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &370670250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2056,6 +2061,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 7613084560423289367, guid: e28308bcdd7692b4d9a7fdccc3ac83ee, type: 3}
+    - target: {fileID: 7700539278622809166, guid: 1fba06903242aed43ad48d045190617e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700539278622809166, guid: 1fba06903242aed43ad48d045190617e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700539278622809166, guid: 1fba06903242aed43ad48d045190617e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8372598503216121759, guid: 1fba06903242aed43ad48d045190617e, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -2170,7 +2187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::checkIngredients
   soupSocket: {fileID: 660687742}
-  dish_num: 1
+  dish_num: 2
   checkRecipe: {fileID: 1814085275}
 --- !u!1001 &697121070
 PrefabInstance:
@@ -3375,6 +3392,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6798870211193837018, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798870211193837018, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798870211193837018, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8300688095972192849, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
       propertyPath: m_Name
       value: Cheese
@@ -3810,7 +3839,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4176930388521578728, guid: 36c9de5f2da5be640b5d0173db7c98f4, type: 3}
       propertyPath: m_Name
-      value: Dish1
+      value: Dish2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4176930388521578728, guid: 36c9de5f2da5be640b5d0173db7c98f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6059760515415796477, guid: 36c9de5f2da5be640b5d0173db7c98f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3872,6 +3905,11 @@ PrefabInstance:
 --- !u!4 &1322469631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8167947219614082614, guid: 36c9de5f2da5be640b5d0173db7c98f4, type: 3}
+  m_PrefabInstance: {fileID: 1322469630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1322469632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4176930388521578728, guid: 36c9de5f2da5be640b5d0173db7c98f4, type: 3}
   m_PrefabInstance: {fileID: 1322469630}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1399055827
@@ -4049,6 +4087,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310015343617758602, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798870211193837018, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798870211193837018, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.021
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798870211193837018, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8300688095972192849, guid: 577ff7f943c107f4298cdc2022e1f30a, type: 3}
@@ -4579,7 +4629,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3f6ca8d07095e4d8b46f089bcae6e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  finalDish: {fileID: 6014809580368639151}
+  finalDishes:
+  - {fileID: 6014809580368639151}
+  - {fileID: 366112104}
+  - {fileID: 1322469632}
   num_dishes: 3
 --- !u!4 &1814085276
 Transform:
@@ -5076,7 +5129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7700539278622809166, guid: 1fba06903242aed43ad48d045190617e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.019
+      value: 0.135
       objectReference: {fileID: 0}
     - target: {fileID: 7700539278622809166, guid: 1fba06903242aed43ad48d045190617e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5196,7 +5249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::checkIngredients
   soupSocket: {fileID: 2072260100}
-  dish_num: 1
+  dish_num: 2
   checkRecipe: {fileID: 1814085275}
 --- !u!1 &2097443355
 GameObject:
