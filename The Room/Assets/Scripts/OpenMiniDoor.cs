@@ -64,21 +64,22 @@ public class OpenMiniDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && isLocked)
         {
+            // Show the popup
             if (popupCanvas != null)
-                popupCanvas.gameObject.SetActive(true);
+                StartCoroutine(ShowPopupForSeconds(5f));
 
+            // Flash red emission
             if (doorRenderer != null)
                 StartCoroutine(FlashRedEmission());
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    // Coroutine to show popup for a fixed duration
+    private IEnumerator ShowPopupForSeconds(float duration)
     {
-        if (other.CompareTag("Player"))
-        {
-            if (popupCanvas != null)
-                popupCanvas.gameObject.SetActive(false);
-        }
+        popupCanvas.gameObject.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        popupCanvas.gameObject.SetActive(false);
     }
 
     // Flash emission red and fade back
