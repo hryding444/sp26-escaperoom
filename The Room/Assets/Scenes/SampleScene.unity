@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cbea7a831bcf3134082e2d1246a79918, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: 919132149155446097, guid: cbea7a831bcf3134082e2d1246a79918, type: 3}
       propertyPath: m_Name
       value: Prop_KitchenTable_04
@@ -836,10 +840,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bda0dddbf00bf6448a67392a58158f47, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: 919132149155446097, guid: bda0dddbf00bf6448a67392a58158f47, type: 3}
       propertyPath: m_Name
       value: Prop_KitchenCabinet_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5520608776364062897, guid: bda0dddbf00bf6448a67392a58158f47, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -909,10 +921,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 074fff2b7b1ab854fb04e1902cbb9831, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
+    - target: {fileID: -3450988114150664644, guid: 074fff2b7b1ab854fb04e1902cbb9831, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: 919132149155446097, guid: 074fff2b7b1ab854fb04e1902cbb9831, type: 3}
       propertyPath: m_Name
       value: Prop_Oven_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7195855713445370605, guid: 074fff2b7b1ab854fb04e1902cbb9831, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1730,6 +1754,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 077cd2d02327d1c4f8e7e945e7920950, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: 919132149155446097, guid: 077cd2d02327d1c4f8e7e945e7920950, type: 3}
       propertyPath: m_Name
       value: Prop_KitchenTable_01
@@ -2154,10 +2182,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: bda0dddbf00bf6448a67392a58158f47, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: 919132149155446097, guid: bda0dddbf00bf6448a67392a58158f47, type: 3}
       propertyPath: m_Name
       value: Prop_KitchenCabinet_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5520608776364062897, guid: bda0dddbf00bf6448a67392a58158f47, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2597,6 +2633,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8768724180816866106, guid: 14eaa2a056ff2704190094e88a955c04, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: -8679921383154817045, guid: 14eaa2a056ff2704190094e88a955c04, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -2653,10 +2693,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 14eaa2a056ff2704190094e88a955c04, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: 919132149155446097, guid: 14eaa2a056ff2704190094e88a955c04, type: 3}
       propertyPath: m_Name
       value: Prop_Fridge_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7484988519526445364, guid: 14eaa2a056ff2704190094e88a955c04, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2726,6 +2774,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 56698a31d96b09649914b006bdc8c741, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: 919132149155446097, guid: 56698a31d96b09649914b006bdc8c741, type: 3}
       propertyPath: m_Name
       value: Prop_StorageShelve
@@ -2743,6 +2795,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9083596403792911632, guid: 2882e9c72d90667409955188486559ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: -8679921383154817045, guid: 2882e9c72d90667409955188486559ae, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.5
@@ -2799,10 +2855,34 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2882e9c72d90667409955188486559ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
+    - target: {fileID: -2681274219704850935, guid: 2882e9c72d90667409955188486559ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
+    - target: {fileID: -1828074723001096434, guid: 2882e9c72d90667409955188486559ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
+    - target: {fileID: -1192054265589861303, guid: 2882e9c72d90667409955188486559ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     - target: {fileID: 919132149155446097, guid: 2882e9c72d90667409955188486559ae, type: 3}
       propertyPath: m_Name
       value: Prop_Heater
       objectReference: {fileID: 0}
+    - target: {fileID: 3019260128403300290, guid: 2882e9c72d90667409955188486559ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
+    - target: {fileID: 6521175038786566938, guid: 2882e9c72d90667409955188486559ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c783ec5a78cd4778923540f68997f04, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
