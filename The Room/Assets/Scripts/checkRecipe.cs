@@ -21,9 +21,9 @@ public class checkRecipe : MonoBehaviour
             dish.SetActive(false);
         }
         recipeList = new List<List<String>>() {
-            new List<string>() {"Carrot", "Tomato"},
-            new List<string>() {"Cheese", "Dough"},
-            new List<string>() {"Carrot", "Tomato"},
+            new List<string>() {"Tomato", "Tortilla"},
+            new List<string>() {"Turnip", "Lettuce"},
+            new List<string>() {"Chicken", "Bread"},
 
         };
         ingredientsList = new List<Dictionary<string, string>>()
