@@ -1,22 +1,28 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using System.Collections;
 
 public class OpenMiniDoor : MonoBehaviour
 {
     [Header("Door Parts")]
-    public Transform rightDoor;   // Assign the right door child here
+    public Transform rightDoor;          // The part that rotates
+    public Renderer doorRenderer;        // Renderer for the door material
 
     [Header("Input")]
     public InputActionReference interactAction;
 
     [Header("Settings")]
-    public float openAngle = 90f;    // Rotation angle in degrees
-    public float openSpeed = 2f;     // How fast the door rotates
+    public float openAngle = 90f;
+    public float openSpeed = 2f;
 
     [Header("UI")]
-    public Canvas popupCanvas;            // The world-space canvas for the popup
-    public TextMeshProUGUI popupText;     // The TMP text inside the popup
+    public Canvas popupCanvas;           
+    public TextMeshProUGUI popupText;
+
+    [Header("Visual Feedback")]
+    public Color lockedEmission = Color.red; // Red glow
+    public float tintDuration = 0.5f;       // Time to show the red emission
 
     private bool playerInRange = false;
     private bool isOpen = false;
@@ -24,15 +30,22 @@ public class OpenMiniDoor : MonoBehaviour
 
     private Quaternion closedRotation;
     private Quaternion openRotation;
+    private Color originalEmission;
 
     void Start()
     {
-        // Cache initial rotation
         closedRotation = rightDoor.localRotation;
         openRotation = closedRotation * Quaternion.Euler(0f, openAngle, 0f);
 
         if (popupCanvas != null)
             popupCanvas.gameObject.SetActive(false);
+
+        if (doorRenderer != null)
+        {
+            // Enable emission keyword and store original emission
+            doorRenderer.material.EnableKeyword("_EMISSION");
+            originalEmission = doorRenderer.material.GetColor("_EmissionColor");
+        }
     }
 
     void OnEnable()
@@ -47,18 +60,21 @@ public class OpenMiniDoor : MonoBehaviour
         interactAction.action.Disable();
     }
 
-    // Called when player presses the assigned input action
     void OnInteract(InputAction.CallbackContext ctx)
     {
-        // Only respond if player is close, door not open, and unlocked
         if (!playerInRange || isOpen)
             return;
-        
+
         if (isLocked)
         {
-            // Show popup in front of player
+            // Show popup text
             if (popupCanvas != null)
-                StartCoroutine(ShowPopup(2f));
+                StartCoroutine(ShowPopup(10f));
+
+            // Flash red emission
+            if (doorRenderer != null)
+                StartCoroutine(FlashRedEmission());
+
             return;
         }
 
@@ -67,7 +83,6 @@ public class OpenMiniDoor : MonoBehaviour
 
     void Update()
     {
-        // Animate door opening smoothly
         if (isOpen)
         {
             rightDoor.localRotation = Quaternion.Lerp(
@@ -78,13 +93,11 @@ public class OpenMiniDoor : MonoBehaviour
         }
     }
 
-    // Called by your socket manager when all sockets are filled
     public void UnlockDoor()
     {
         isLocked = false;
     }
 
-    // Detect player entering the proximity trigger
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -97,18 +110,29 @@ public class OpenMiniDoor : MonoBehaviour
             playerInRange = false;
     }
 
-    System.Collections.IEnumerator ShowPopup(float duration)
+    // Show popup text for a fixed duration
+    IEnumerator ShowPopup(float duration)
     {
-        // Move canvas in front of player
-        Camera cam = Camera.main;
-        if (cam != null)
-        {
-            popupCanvas.transform.position = cam.transform.position + cam.transform.forward * 1.5f; // 1.5m in front
-            popupCanvas.transform.rotation = Quaternion.LookRotation(cam.transform.forward); // face player
-        }
-
         popupCanvas.gameObject.SetActive(true);
         yield return new WaitForSeconds(duration);
         popupCanvas.gameObject.SetActive(false);
+    }
+
+    // Flash emission red and then fade back
+    IEnumerator FlashRedEmission()
+    {
+        float elapsed = 0f;
+        Material mat = doorRenderer.material;
+
+        while (elapsed < tintDuration)
+        {
+            float t = elapsed / tintDuration;
+            // Lerp emission color from original to red
+            mat.SetColor("_EmissionColor", Color.Lerp(originalEmission, lockedEmission, t));
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        mat.SetColor("_EmissionColor", originalEmission); // restore original
     }
 }
