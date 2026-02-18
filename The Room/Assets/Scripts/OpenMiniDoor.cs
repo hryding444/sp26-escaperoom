@@ -72,6 +72,12 @@ public class OpenMiniDoor : MonoBehaviour
             if (doorRenderer != null)
                 StartCoroutine(FlashRedEmission());
         }
+
+        else
+        {
+            // Door is unlocked → open it
+            isOpen = true;
+        }
     }
 
     // Coroutine to show popup for a fixed duration
