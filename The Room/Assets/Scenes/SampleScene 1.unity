@@ -15162,6 +15162,7 @@ MonoBehaviour:
   popupText: {fileID: 99053536}
   lockedEmission: {r: 1, g: 0, b: 0, a: 1}
   tintDuration: 0.5
+  fanfare: {fileID: 1960112091}
   manager: {fileID: 743536156}
 --- !u!23 &1927306189 stripped
 MeshRenderer:

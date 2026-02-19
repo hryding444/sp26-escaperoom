@@ -12,7 +12,7 @@ public class OpenMiniDoor : MonoBehaviour
 
     [Header("Settings")]
     public float openAngleRight = 90f;
-    public float openAngleLeft = -90f;
+    public float openAngleLeft = 90f;
     public float openSpeed = 2f;
 
     [Header("UI")]
@@ -22,6 +22,8 @@ public class OpenMiniDoor : MonoBehaviour
     [Header("Visual Feedback")]
     public Color lockedEmission = Color.red;
     public float tintDuration = 0.5f;
+
+    public AudioSource fanfare;
 
     private bool isOpen = false;
     private bool isLocked = true;
@@ -50,8 +52,10 @@ public class OpenMiniDoor : MonoBehaviour
 
     void Update()
     {
-        if (isOpen)
+        if (!isLocked)
         {
+
+            fanfare.Play();
             rightDoor.localRotation = Quaternion.Lerp(
                 rightDoor.localRotation,
                 openRotationRight,
