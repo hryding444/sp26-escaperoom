@@ -10697,7 +10697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -22.48999, y: -0.2}
+  m_AnchoredPosition: {x: -22.48999, y: 0.46}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1444940803
@@ -10742,19 +10742,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197735954612823630, guid: d11cbcf1bd1e5f346839e2f676d89830, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.7999997
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6197735954612823630, guid: d11cbcf1bd1e5f346839e2f676d89830, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.7999997
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6197735954612823630, guid: d11cbcf1bd1e5f346839e2f676d89830, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.7999997
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6197735954612823630, guid: d11cbcf1bd1e5f346839e2f676d89830, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -120.01
+      value: -119.32
       objectReference: {fileID: 0}
     - target: {fileID: 6197735954612823630, guid: d11cbcf1bd1e5f346839e2f676d89830, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10794,7 +10794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197735954612823630, guid: d11cbcf1bd1e5f346839e2f676d89830, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6721931059143736564, guid: d11cbcf1bd1e5f346839e2f676d89830, type: 3}
       propertyPath: m_Name
@@ -13464,7 +13464,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
   m_LocalPosition: {x: -22.5, y: 5.252, z: -0.7}
-  m_LocalScale: {x: 1.06, y: 1, z: 1.38}
+  m_LocalScale: {x: 1.06, y: 1, z: 1.3994579}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 792536803}
@@ -15156,13 +15156,14 @@ MonoBehaviour:
   leftDoor: {fileID: 1444940804}
   doorRenderer: {fileID: 1927306189}
   openAngleRight: 90
-  openAngleLeft: -90
+  openAngleLeft: 90
   openSpeed: 2
   popupCanvas: {fileID: 1440898611}
   popupText: {fileID: 99053536}
   lockedEmission: {r: 1, g: 0, b: 0, a: 1}
   tintDuration: 0.5
   fanfare: {fileID: 1960112091}
+  background: {fileID: 1284892387}
   manager: {fileID: 743536156}
 --- !u!23 &1927306189 stripped
 MeshRenderer:

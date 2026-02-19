@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using System.Collections;
+using UnityEngine.UIElements;
 
 public class OpenMiniDoor : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class OpenMiniDoor : MonoBehaviour
     public float tintDuration = 0.5f;
 
     public AudioSource fanfare;
+    public AudioSource background;
 
     private bool isOpen = false;
     private bool isLocked = true;
@@ -52,27 +54,25 @@ public class OpenMiniDoor : MonoBehaviour
 
     void Update()
     {
-        if (!isLocked)
-        {
+        
+    }
 
-            fanfare.Play();
-            rightDoor.localRotation = Quaternion.Lerp(
+    public void UnlockDoor()
+    {
+        fanfare.Play();
+        background.Stop();
+        isLocked = false;
+        rightDoor.localRotation = Quaternion.Lerp(
                 rightDoor.localRotation,
                 openRotationRight,
                 Time.deltaTime * openSpeed
             );
 
-            leftDoor.localRotation = Quaternion.Lerp(
-                rightDoor.localRotation,
-                openRotationLeft,
-                Time.deltaTime * openSpeed
-            );
-        }
-    }
-
-    public void UnlockDoor()
-    {
-        isLocked = false;
+        leftDoor.localRotation = Quaternion.Lerp(
+            rightDoor.localRotation,
+            openRotationLeft,
+            Time.deltaTime * openSpeed
+        );
     }
 
     // Trigger events
