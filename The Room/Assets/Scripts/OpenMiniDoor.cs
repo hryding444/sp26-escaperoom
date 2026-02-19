@@ -27,6 +27,8 @@ public class OpenMiniDoor : MonoBehaviour
     private Quaternion openRotation;
     private Color originalEmission;
 
+    public GameManager manager;
+
     void Start()
     {
         closedRotation = rightDoor.localRotation;
@@ -66,11 +68,14 @@ public class OpenMiniDoor : MonoBehaviour
         {
             // Show the popup
             if (popupCanvas != null)
-                StartCoroutine(ShowPopupForSeconds(5f));
+                //StartCoroutine(ShowPopupForSeconds(5f));
+                popupCanvas.gameObject.SetActive(true);
 
             // Flash red emission
             if (doorRenderer != null)
                 StartCoroutine(FlashRedEmission());
+
+            manager.startEscape();
         }
 
         else

@@ -13,6 +13,7 @@ public class checkRecipe : MonoBehaviour
     public int num_dishes = 3;
     public List<List<String>> recipeList = new List<List<String>>();
     List<Dictionary<string, string>> ingredientsList;
+    public GameObject[] dishParts;
 
     private void Start()
     {
@@ -28,28 +29,33 @@ public class checkRecipe : MonoBehaviour
         };
         ingredientsList = new List<Dictionary<string, string>>()
         {
-            new Dictionary<string, string>() { {"Garnish", ""}, {"Main", ""} },
-            new Dictionary<string, string>() { {"Garnish", ""}, {"Main", ""} },
-            new Dictionary<string, string>() { {"Garnish", ""}, {"Main", ""} }
+            new Dictionary<string, string>() { {"Garnish0", ""}, {"Main0", ""} },
+            new Dictionary<string, string>() { {"Garnish1", ""}, {"Main1", ""} },
+            new Dictionary<string, string>() { {"Garnish2", ""}, {"Main2", ""} }
         };
     }
     public void addIngredient(int dish_num, string socket, string ingredient)
     {
-        ingredientsList[dish_num][socket] = ingredient;
+        string socket_num = socket + (dish_num.ToString());
+        ingredientsList[dish_num][socket_num] = ingredient;
         checkRecipeTruth(dish_num);
     }
 
     public void removeIngredient(int dish_num, string socket, string ingredient)
     {
-        ingredientsList[dish_num][socket] = "";
+        string socket_num = socket + (dish_num.ToString());
+        ingredientsList[dish_num][socket_num] = "";
         checkRecipeTruth(dish_num);
     }
 
     private void checkRecipeTruth(int dish_num)
     {
         Dictionary<string, string> dict = ingredientsList[dish_num];
-        if ((dict["Garnish"] == recipeList[dish_num][0]) && (dict["Main"] == recipeList[dish_num][1])) {
+        string garnish = "Garnish" + (dish_num.ToString());
+        string main = "Main" + (dish_num.ToString());
+        if ((dict[garnish] == recipeList[dish_num][0]) && (dict[main] == recipeList[dish_num][1])) {
             finalDishes[dish_num].SetActive(true);
+            dishParts[dish_num].SetActive(false);
         }
     }
 }
