@@ -14,6 +14,7 @@ public class checkRecipe : MonoBehaviour
     public List<List<String>> recipeList = new List<List<String>>();
     List<Dictionary<string, string>> ingredientsList;
     public GameObject[] dishParts;
+    public AudioSource bellDing;
 
     private void Start()
     {
@@ -55,6 +56,7 @@ public class checkRecipe : MonoBehaviour
         string main = "Main" + (dish_num.ToString());
         if ((dict[garnish] == recipeList[dish_num][0]) && (dict[main] == recipeList[dish_num][1])) {
             finalDishes[dish_num].SetActive(true);
+            bellDing.Play();
         }
     }
 }
