@@ -7,10 +7,12 @@ public class OpenMiniDoor : MonoBehaviour
 {
     [Header("Door Parts")]
     public Transform rightDoor;
+    public Transform leftDoor;
     public Renderer doorRenderer;
 
     [Header("Settings")]
-    public float openAngle = 90f;
+    public float openAngleRight = 90f;
+    public float openAngleLeft = -90f;
     public float openSpeed = 2f;
 
     [Header("UI")]
@@ -24,7 +26,8 @@ public class OpenMiniDoor : MonoBehaviour
     private bool isOpen = false;
     private bool isLocked = true;
     private Quaternion closedRotation;
-    private Quaternion openRotation;
+    private Quaternion openRotationRight;
+    private Quaternion openRotationLeft;
     private Color originalEmission;
 
     public GameManager manager;
@@ -32,7 +35,8 @@ public class OpenMiniDoor : MonoBehaviour
     void Start()
     {
         closedRotation = rightDoor.localRotation;
-        openRotation = closedRotation * Quaternion.Euler(0f, openAngle, 0f);
+        openRotationRight = closedRotation * Quaternion.Euler(0f, openAngleRight, 0f);
+        openRotationLeft = closedRotation * Quaternion.Euler(0f, openAngleLeft, 0f);
 
         if (popupCanvas != null)
             popupCanvas.gameObject.SetActive(false);
@@ -50,7 +54,13 @@ public class OpenMiniDoor : MonoBehaviour
         {
             rightDoor.localRotation = Quaternion.Lerp(
                 rightDoor.localRotation,
-                openRotation,
+                openRotationRight,
+                Time.deltaTime * openSpeed
+            );
+
+            leftDoor.localRotation = Quaternion.Lerp(
+                rightDoor.localRotation,
+                openRotationLeft,
                 Time.deltaTime * openSpeed
             );
         }
