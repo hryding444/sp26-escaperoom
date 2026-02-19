@@ -55,7 +55,6 @@ public class checkRecipe : MonoBehaviour
         string main = "Main" + (dish_num.ToString());
         if ((dict[garnish] == recipeList[dish_num][0]) && (dict[main] == recipeList[dish_num][1])) {
             finalDishes[dish_num].SetActive(true);
-            dishParts[dish_num].SetActive(false);
         }
     }
 }

@@ -3,6 +3,7 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement;
+using UnityEngine.XR.Interaction.Toolkit.Utilities;
 
 public class GrowShrink : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GrowShrink : MonoBehaviour
     private bool growing = true;
     [SerializeField] private Vector3 bigScale;
     [SerializeField] private Vector3 smallScale;
-    [SerializeField] private float duration = 1.0f;
+    [SerializeField] private float duration = 2f;
     void Start() 
     {
 
@@ -30,7 +31,7 @@ public class GrowShrink : MonoBehaviour
             {
                 curr_coroutine = StartCoroutine(scaleSize(bigScale, duration));
                 growing = false;
-                dynamicMove.moveSpeed = 10f;
+                dynamicMove.moveSpeed = 7f;
             } else
             {
                 curr_coroutine = StartCoroutine(scaleSize(smallScale, duration));
@@ -42,13 +43,13 @@ public class GrowShrink : MonoBehaviour
 
     private void Update()
     {
-        if (XROrigin.transform.localScale == bigScale)
+        if (growing)
+        {
+            dynamicMove.moveSpeed = 7f;
+        }
+        if (!growing)
         {
             dynamicMove.moveSpeed = 2.5f;
-        }
-        if (XROrigin.transform.localScale == smallScale)
-        {
-            dynamicMove.moveSpeed = 10f;
         }
     }
 
